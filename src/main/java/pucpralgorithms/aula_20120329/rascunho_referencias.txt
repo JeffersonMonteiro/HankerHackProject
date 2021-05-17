@@ -1,0 +1,33 @@
+class Empregado
+{
+
+
+}
+
+
+class Gerente extends Empregado
+{
+
+}
+
+//...
+		Empregado e1;
+		e1 = new Gerente();
+		
+		e1.setNome("Fulano");
+		//ERRO! Método setBonus não existe na classe Empregado
+		//e1.setBonus(1300);
+		
+		//aqui utilizo type cast para indicar que e1 de fato 
+		//referencia um Gerente -> cuidado, se não for gera um erro
+		//de tempo de execução!
+		((Gerente)e1).setBonus(1300);
+		
+		e1.calculaSalario(130):
+		
+		Gerente g1;
+		g1 = new Empregado();
+		
+		g1.setBonus(1500);
+		
+		
