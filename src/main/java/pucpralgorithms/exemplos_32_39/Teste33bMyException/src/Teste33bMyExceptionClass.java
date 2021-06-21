@@ -1,4 +1,6 @@
-//Exemplo de como declarar uma exceção customizada
+package pucpralgorithms.exemplos_32_39.Teste33bMyException.src;
+
+//Exemplo de como declarar uma exceï¿½ï¿½o customizada
 //e customizar a sua mensagem
 public class Teste33bMyExceptionClass {
 
@@ -11,8 +13,8 @@ public class Teste33bMyExceptionClass {
 		catch(MyException e)
 		{
 			//A chamada a printStackTrace mostra a mensagem
-			//exibida pela exceção e toda a pilha de chamadas
-			//percorrida pelo seu lançamento
+			//exibida pela exceï¿½ï¿½o e toda a pilha de chamadas
+			//percorrida pelo seu lanï¿½amento
 			e.printStackTrace();
 		}
 	}
@@ -29,7 +31,7 @@ class MyException extends Exception
 {
 	public MyException(String msg)
 	{
-		super("Exceção encontrada em: " + msg);
+		super("Exceï¿½ï¿½o encontrada em: " + msg);
 	}
 	
 }

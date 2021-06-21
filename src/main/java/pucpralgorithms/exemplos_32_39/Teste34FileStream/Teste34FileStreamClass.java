@@ -1,3 +1,5 @@
+package pucpralgorithms.exemplos_32_39.Teste34FileStream;
+
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -71,8 +73,8 @@ class MyListener implements ActionListener
 				FileReader fr = new FileReader("data.dat");
 				int data;
 				
-				//faz a leitura do arquivo. O tipo de retorno é int
-				//para permitir a verificação do fim de arquivo (-1)
+				//faz a leitura do arquivo. O tipo de retorno ï¿½ int
+				//para permitir a verificaï¿½ï¿½o do fim de arquivo (-1)
 				while ((data = fr.read()) != -1)
 				{
 					fFrame.tfText.setText(fFrame.tfText.getText() + (char)data);
@@ -83,12 +85,12 @@ class MyListener implements ActionListener
 				
 			} catch (FileNotFoundException e) {
 				
-				JOptionPane.showMessageDialog(fFrame, "Arquivo não existe", "Erro", 
+				JOptionPane.showMessageDialog(fFrame, "Arquivo nï¿½o existe", "Erro", 
 						JOptionPane.INFORMATION_MESSAGE);
 			}
 			catch (IOException e)
 			{
-				JOptionPane.showMessageDialog(fFrame, "Arquivo não existe", "Erro", 
+				JOptionPane.showMessageDialog(fFrame, "Arquivo nï¿½o existe", "Erro", 
 						JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
@@ -107,12 +109,12 @@ class MyListener implements ActionListener
 				
 			} catch (FileNotFoundException e) {
 				
-				JOptionPane.showMessageDialog(fFrame, "Arquivo não pode ser escrito", "Erro", 
+				JOptionPane.showMessageDialog(fFrame, "Arquivo nï¿½o pode ser escrito", "Erro", 
 						JOptionPane.INFORMATION_MESSAGE);
 			}
 			catch (IOException e)
 			{
-				JOptionPane.showMessageDialog(fFrame, "Arquivo não pode ser escrito", "Erro", 
+				JOptionPane.showMessageDialog(fFrame, "Arquivo nï¿½o pode ser escrito", "Erro", 
 						JOptionPane.INFORMATION_MESSAGE);
 			}
 		}

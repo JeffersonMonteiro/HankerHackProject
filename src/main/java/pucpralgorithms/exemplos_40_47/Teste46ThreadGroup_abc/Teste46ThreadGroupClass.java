@@ -1,3 +1,5 @@
+package pucpralgorithms.exemplos_40_47.Teste46ThreadGroup_abc;
+
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -94,14 +96,14 @@ class Somador
 		throws InterruptedException
 	{
 		
-		//as threads só podem começar a acumular valores quando
-		//o total for superior a 20000, com exceção da thread 
+		//as threads sï¿½ podem comeï¿½ar a acumular valores quando
+		//o total for superior a 20000, com exceï¿½ï¿½o da thread 
 		//de identificador 1
 		if (tid.th_id != 1)
 		{
 			
-					//Se a thread for interrompida aqui, a exceção é
-					//lançada e capturada no corpo do método run()
+					//Se a thread for interrompida aqui, a exceï¿½ï¿½o ï¿½
+					//lanï¿½ada e capturada no corpo do mï¿½todo run()
 					if (total < 20000)
 					{
 						//Espera e libera o bloqueio do objeto somador
@@ -116,7 +118,7 @@ class Somador
 		total = auxiliar;
 		
 		//Agora podemos notificar as demais threads
-		//para começarem a acumular
+		//para comeï¿½arem a acumular
 		if (total >= 20000)
 		{
 			notifyAll();

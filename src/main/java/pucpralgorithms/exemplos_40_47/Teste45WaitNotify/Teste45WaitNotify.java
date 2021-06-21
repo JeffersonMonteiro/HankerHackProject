@@ -1,3 +1,5 @@
+package pucpralgorithms.exemplos_40_47.Teste45WaitNotify;
+
 import java.awt.GridLayout;
 
 import javax.swing.JFrame;
@@ -75,8 +77,8 @@ class Somador
 	public synchronized void adicionar(int valor, MyThread tid)
 	{
 		
-		//as threads só podem começar a acumular valores quando
-		//o total for superior a 120000, com exceção da thread 
+		//as threads sï¿½ podem comeï¿½ar a acumular valores quando
+		//o total for superior a 120000, com exceï¿½ï¿½o da thread 
 		//de identificador 1
 		if (tid.th_id != 1)
 		{
@@ -98,7 +100,7 @@ class Somador
 		total = auxiliar;
 		
 		//Agora podemos notificar as demais threads
-		//para começarem a acumular
+		//para comeï¿½arem a acumular
 		if (total >= 50000)
 		{
 			notifyAll();

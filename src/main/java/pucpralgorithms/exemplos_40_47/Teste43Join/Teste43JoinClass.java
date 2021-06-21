@@ -1,3 +1,5 @@
+package pucpralgorithms.exemplos_40_47.Teste43Join;
+
 import java.awt.GridLayout;
 
 import javax.swing.JFrame;
@@ -85,7 +87,7 @@ class MyThread extends Thread
 			counter++;
 			try {
 				
-				//Taxa de atualização do contador é inversamente
+				//Taxa de atualizaï¿½ï¿½o do contador ï¿½ inversamente
 				//proporcional ao 'id' da thread
 				sleep(th_id*20);
 				status.setText("Thread "+ th_id + ": " + counter);
@@ -97,7 +99,7 @@ class MyThread extends Thread
 			
 		}
 		
-		//A thread 2 espera pelo término da thread 3, embora
+		//A thread 2 espera pelo tï¿½rmino da thread 3, embora
 		//a thread 2 termine a sua contagem antes
 		if (th_id == 2)
 		{

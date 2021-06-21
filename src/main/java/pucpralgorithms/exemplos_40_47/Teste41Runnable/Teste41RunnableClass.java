@@ -1,11 +1,13 @@
-//Exemplo de criação de thread através de objeto que
+package pucpralgorithms.exemplos_40_47.Teste41Runnable;
+
+//Exemplo de criaï¿½ï¿½o de thread atravï¿½s de objeto que
 //implementa a interface Runnable
 public class Teste41RunnableClass {
 
 	public static void main(String[] args) {
 		
 		//Neste caso deve-se instanciar um objeto da classe Thread
-		//e passar o objeto que implementa Runnable como parâmetro
+		//e passar o objeto que implementa Runnable como parï¿½metro
 		Thread t1 = new Thread(new Counter(1));
 		Thread t2 = new Thread(new Counter(2));
 		
@@ -31,7 +33,7 @@ class Counter implements Runnable
 		while (counter < 1000)
 		{
 			//Em qualquer ponto a thread pode ser preemptada
-			//para execução de outra thread ativa
+			//para execuï¿½ï¿½o de outra thread ativa
 			counter++;
 			System.out.println("Thread " + thread_id + " com valor " + counter);
 		}

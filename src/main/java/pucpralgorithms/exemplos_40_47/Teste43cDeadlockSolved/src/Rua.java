@@ -1,3 +1,4 @@
+package pucpralgorithms.exemplos_40_47.Teste43cDeadlockSolved.src;
 
 public class Rua {
 	
@@ -19,8 +20,8 @@ public class Rua {
 	{
 		/*
 		 * O trecho do while a seguir simula uma "yellow box". Caso ele seja retirado,
-		 * ocorrerá um deadlock caso uma das ruas tenha mais do que 4 carros 
-		 * e a outra também chegue a 4 carros antes que a primeira tenha a oportunidade
+		 * ocorrerï¿½ um deadlock caso uma das ruas tenha mais do que 4 carros 
+		 * e a outra tambï¿½m chegue a 4 carros antes que a primeira tenha a oportunidade
 		 * de desenfileirar algum.
 		 */
 		while (carros == 4)
@@ -29,7 +30,7 @@ public class Rua {
 			try {
 				System.out.println("Yellow box em " + name);
 				wait();
-				System.out.println("Avançando em " + name);
+				System.out.println("Avanï¿½ando em " + name);
 			} catch (InterruptedException e) {
 				
 				e.printStackTrace();
@@ -44,17 +45,17 @@ public class Rua {
 	}
 	
 	/*
-	 * Faz a travessia de um carro da rua atual através da rua 
-	 * indicada pelo parâmetro cruzamento
+	 * Faz a travessia de um carro da rua atual atravï¿½s da rua 
+	 * indicada pelo parï¿½metro cruzamento
 	 */
 	public synchronized void atravessa(Rua cruzamento) //cruzamento da via
 	{
 		
 		/*
-		 * Se o número de carros na rua que pretendemos cruzar é maior ou 
-		 * igual a 5, significa que o cruzamento está trancado.
-		 * Em teoria, como há uma yellow box na rua do cruzamento, esta 
-		 * condição deve ser sempre falsa.
+		 * Se o nï¿½mero de carros na rua que pretendemos cruzar ï¿½ maior ou 
+		 * igual a 5, significa que o cruzamento estï¿½ trancado.
+		 * Em teoria, como hï¿½ uma yellow box na rua do cruzamento, esta 
+		 * condiï¿½ï¿½o deve ser sempre falsa.
 		 */
 //		if (cruzamento.getCarros() >= 5)
 //		{
@@ -68,7 +69,7 @@ public class Rua {
 //		}
 		
 		/*
-		 * Se é possível atravessar o cruzamento...
+		 * Se ï¿½ possï¿½vel atravessar o cruzamento...
 		 */
 		if (cruzamento.getCarros() < 5)
 		{
@@ -77,19 +78,19 @@ public class Rua {
 				carros--;
 				System.out.println("Atravessou a partir da via " + name + " " + carros);
 				
-				/* aqui ocorre a liberação de quem 
-				* está esperando atrás da yellow box nesta rua
-				*	(chamada de wait() no método enfileira, que foi efetuada
+				/* aqui ocorre a liberaï¿½ï¿½o de quem 
+				* estï¿½ esperando atrï¿½s da yellow box nesta rua
+				*	(chamada de wait() no mï¿½todo enfileira, que foi efetuada
 				*  por uma das threads da classe Fila)
 				*/ 
 				notify();
 				
 				/*
 				 * Se havia algum carro esperando para cruzar na outra rua, pelo fato de termos
-				 * mais do que 4 carros enfileirados aqui, então notificamos a outra thread.
-				 * Teoricamente este trecho não deveria ser necessário, dado que esta
+				 * mais do que 4 carros enfileirados aqui, entï¿½o notificamos a outra thread.
+				 * Teoricamente este trecho nï¿½o deveria ser necessï¿½rio, dado que esta
 				 * rua nunca deveria ter mais do que 4 carros enfileirados em 
-				 * função de existir uma yellow box.
+				 * funï¿½ï¿½o de existir uma yellow box.
 				 */
 //				if (carros == 4)
 //				{

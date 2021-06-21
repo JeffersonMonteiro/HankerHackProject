@@ -1,10 +1,12 @@
+package pucpralgorithms.exemplos_40_47.Teste44Synchronized;
+
 import java.awt.GridLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-//Exemplo de uso de sincronização de objeto para evitar
-//'race conditions' (condições de corrida)
+//Exemplo de uso de sincronizaï¿½ï¿½o de objeto para evitar
+//'race conditions' (condiï¿½ï¿½es de corrida)
 public class Teste44SynchronizedClass {
 
 	public static void main(String[] args) {
@@ -74,13 +76,13 @@ class Somador
 	
 	public static synchronized void adicionar(int valor)
 	{
-		/*Aqui é o ponto onde pode ocorrer a condição de 
-		corrida (race condition) caso o método não seja sincronizado. 
-		Ou seja, antes da variável
-		'total' ser atualizada (com a cópia de 'auxiliar'
-		é possível que a outra thread atualize 'total' e, 
-		nesse caso, quando a execução retornasse para esta
-		thread a atualização da outra thread seria perdida*/
+		/*Aqui ï¿½ o ponto onde pode ocorrer a condiï¿½ï¿½o de 
+		corrida (race condition) caso o mï¿½todo nï¿½o seja sincronizado. 
+		Ou seja, antes da variï¿½vel
+		'total' ser atualizada (com a cï¿½pia de 'auxiliar'
+		ï¿½ possï¿½vel que a outra thread atualize 'total' e, 
+		nesse caso, quando a execuï¿½ï¿½o retornasse para esta
+		thread a atualizaï¿½ï¿½o da outra thread seria perdida*/
 		int auxiliar = total;
 		auxiliar = auxiliar + valor;
 		total = auxiliar;

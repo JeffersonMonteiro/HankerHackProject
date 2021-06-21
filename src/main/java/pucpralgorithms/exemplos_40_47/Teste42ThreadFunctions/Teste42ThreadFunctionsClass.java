@@ -1,4 +1,4 @@
-//Exemplo com uso de sleep para ajustar a taxa de atualização
+package pucpralgorithms.exemplos_40_47.Teste42ThreadFunctions;//Exemplo com uso de sleep para ajustar a taxa de atualizaï¿½ï¿½o
 //dos contadores
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -95,7 +95,7 @@ class MyFrame extends JFrame
 }
 
 //ThreadControl tem como objetivo servir de ouvinte
-//dos eventos de botão e controle das threads envolvidas
+//dos eventos de botï¿½o e controle das threads envolvidas
 class ThreadControl implements ActionListener
 {
 
@@ -119,7 +119,7 @@ class ThreadControl implements ActionListener
 		
 	}
 	
-	//Esse método é chamado para iniciar as threads
+	//Esse mï¿½todo ï¿½ chamado para iniciar as threads
 	//de contagem
 	public void start()
 	{
@@ -204,13 +204,13 @@ class Counter extends Thread
 	
 	public  int getSleepTime() { return sleep_time; }
 	
-	//O método run() é executado quando a thread é iniciada 
+	//O mï¿½todo run() ï¿½ executado quando a thread ï¿½ iniciada 
 	public void run()
 	{
 		while (true)
 		{
 			//Em qualquer ponto a thread pode ser preemptada
-			//para execução de outra thread ativa
+			//para execuï¿½ï¿½o de outra thread ativa
 			counter++;
 			if (thread_id == 1)
 			{

@@ -1,3 +1,5 @@
+package pucpralgorithms.aula_20120419;
+
 import java.io.*;
 public class ExRandomFile
 {

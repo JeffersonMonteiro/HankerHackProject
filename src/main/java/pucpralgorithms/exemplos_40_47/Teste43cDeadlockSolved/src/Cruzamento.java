@@ -1,3 +1,4 @@
+package pucpralgorithms.exemplos_40_47.Teste43cDeadlockSolved.src;
 
 public class Cruzamento extends Thread
 {

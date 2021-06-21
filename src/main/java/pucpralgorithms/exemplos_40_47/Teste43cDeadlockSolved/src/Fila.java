@@ -1,5 +1,6 @@
+package pucpralgorithms.exemplos_40_47.Teste43cDeadlockSolved.src;
 
-public class Fila extends Thread 
+public class Fila extends Thread
 {
 	private Rua rua;
 	public Fila(Rua r)
@@ -13,7 +14,7 @@ public class Fila extends Thread
 		while (true)
 		{
 			/*
-			 * enfileira novos carros na rua de acordo com um tempo aleatório
+			 * enfileira novos carros na rua de acordo com um tempo aleatï¿½rio
 			 */
 			rua.enfileira();
 			rua.setTempo(System.currentTimeMillis());

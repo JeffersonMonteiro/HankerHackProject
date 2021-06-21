@@ -1,4 +1,4 @@
-//Exemplo de uso de finally 
+package pucpralgorithms.exemplos_32_39.Teste33Finally;//Exemplo de uso de finally
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -20,7 +20,7 @@ public class Teste33FinallyClass {
 	}
 }
 
-//Definição da classe de exceção de valor inválido
+//Definiï¿½ï¿½o da classe de exceï¿½ï¿½o de valor invï¿½lido
 class ValueException extends Exception
 {
 	
@@ -36,7 +36,7 @@ class MyFrame extends JFrame
 		JPanel p = new JPanel();
 		p.setLayout(new GridLayout(1,2));
 		 tf = new JTextField("");
-		JLabel l = new JLabel("Digite um número NÃO MAIOR QUE 100");
+		JLabel l = new JLabel("Digite um nï¿½mero Nï¿½O MAIOR QUE 100");
 		getContentPane().setLayout(new BorderLayout());
 		getContentPane().add(p, BorderLayout.NORTH);
 		p.add(l);
@@ -55,8 +55,8 @@ class MyFrame extends JFrame
 
 /*
  * Implementar a interface DocumentListener permite a esta classe
- * redefinir alguns dos métodos que são utilizados na validação/verificação
- * do conteúdo do objeto que utiliza este documento (no exemplo, uma caixa
+ * redefinir alguns dos mï¿½todos que sï¿½o utilizados na validaï¿½ï¿½o/verificaï¿½ï¿½o
+ * do conteï¿½do do objeto que utiliza este documento (no exemplo, uma caixa
  * de texto do frame).
  */
 class OuvinteDeDocumento implements DocumentListener
@@ -74,7 +74,7 @@ class OuvinteDeDocumento implements DocumentListener
 		
 			try
 			{
-				//o método validaNumero() pode lançar a exceção
+				//o mï¿½todo validaNumero() pode lanï¿½ar a exceï¿½ï¿½o
 				valor = validaNumero();
 				status.setText("OK");
 				
@@ -83,19 +83,19 @@ class OuvinteDeDocumento implements DocumentListener
 			catch (Exception e)
 			{
 				//O operador instanceof verifica se o objeto
-				//é de determinada classe
+				//ï¿½ de determinada classe
 				if (e instanceof NumberFormatException)
 				{
-					status.setText("Número não conversível");
+					status.setText("Nï¿½mero nï¿½o conversï¿½vel");
 					
 				}
 				else
 				{
-					status.setText("Número inválido (maior do que 100)!");
+					status.setText("Nï¿½mero invï¿½lido (maior do que 100)!");
 				}
 			}
-			//independente de a exceção ocorrer ou não, esse código sempre 
-			//será executado
+			//independente de a exceï¿½ï¿½o ocorrer ou nï¿½o, esse cï¿½digo sempre 
+			//serï¿½ executado
 			finally
 			{
 				int length = text.getText().length();
@@ -118,16 +118,16 @@ class OuvinteDeDocumento implements DocumentListener
 			{
 				if (e instanceof NumberFormatException)
 				{
-					status.setText("Número não conversível");
+					status.setText("Nï¿½mero nï¿½o conversï¿½vel");
 					
 				}
 				else
 				{
-					status.setText("Número inválido!");
+					status.setText("Nï¿½mero invï¿½lido!");
 				}
 			}
-			//independente de a exceção ocorrer ou não, esse código sempre 
-			//será executado
+			//independente de a exceï¿½ï¿½o ocorrer ou nï¿½o, esse cï¿½digo sempre 
+			//serï¿½ executado
 			finally
 			{
 				int length = text.getText().length();
@@ -150,16 +150,16 @@ class OuvinteDeDocumento implements DocumentListener
 			{
 				if (e instanceof NumberFormatException)
 				{
-					status.setText("Número não conversível");
+					status.setText("Nï¿½mero nï¿½o conversï¿½vel");
 					
 				}
 				else
 				{
-					status.setText("Número inválido!");
+					status.setText("Nï¿½mero invï¿½lido!");
 				}
 			}
-			//independente de a exceção ocorrer ou não, esse código sempre 
-			//será executado
+			//independente de a exceï¿½ï¿½o ocorrer ou nï¿½o, esse cï¿½digo sempre 
+			//serï¿½ executado
 			finally
 			{
 				int length = text.getText().length();
@@ -169,28 +169,28 @@ class OuvinteDeDocumento implements DocumentListener
 			
 		}
 	
-		//Este método anuncia que pode lançar a exceção NumberFormatException
+		//Este mï¿½todo anuncia que pode lanï¿½ar a exceï¿½ï¿½o NumberFormatException
 		double validaNumero() throws ValueException
 		{
 			double num = 0;
-			System.out.println("Entrando no código de validação...");
+			System.out.println("Entrando no cï¿½digo de validaï¿½ï¿½o...");
 			try
 			{
 				num = Double.parseDouble(text.getText());
 				if (num > 100.0)
 				{
-					//instancia e lança a exceção
+					//instancia e lanï¿½a a exceï¿½ï¿½o
 					throw new ValueException();
 				}
 			}
 			/*
-			 * independente da forma como este método retornará (por exceção ou
-			 * por retorno normal), o código dentro do finally sempre será 
+			 * independente da forma como este mï¿½todo retornarï¿½ (por exceï¿½ï¿½o ou
+			 * por retorno normal), o cï¿½digo dentro do finally sempre serï¿½ 
 			 * executado.
 			 */
 			finally
 			{
-				System.out.println("Saindo do código de validação...");
+				System.out.println("Saindo do cï¿½digo de validaï¿½ï¿½o...");
 				
 			}
 			
