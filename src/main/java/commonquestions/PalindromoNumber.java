@@ -19,8 +19,7 @@ public class PalindromoNumber {
         // check if reversedNum and originalNum are equal
         if (originalNum == reversedNum) {
             System.out.println(originalNum + " is Palindrome.");
-        }
-        else {
+        } else {
             System.out.println(originalNum + " is not Palindrome.");
         }
     }
