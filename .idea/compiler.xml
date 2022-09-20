@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="HackerRankProject" />
+        <module name="HankerHackProject" />
       </profile>
     </annotationProcessing>
   </component>
