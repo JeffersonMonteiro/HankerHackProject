@@ -43,6 +43,8 @@ public class MainTest4 {
         listPessoas.sort(Comparator.comparing(Pessoa::getAge).reversed());
 
 
-        listPessoas.forEach(p -> System.out.println("Nome: "+ p.getName() + " Idade: "+ p.getAge()));
+        //listPessoas.forEach(p -> System.out.println("Nome: "+ p.getName() + " Idade: "+ p.getAge()));
+
+        listPessoas.forEach(System.out::println);
     }
 }

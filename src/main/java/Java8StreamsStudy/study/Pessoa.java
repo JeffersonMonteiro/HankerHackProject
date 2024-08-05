@@ -6,9 +6,17 @@ public class Pessoa {
 
     private int age;
 
+    public Pessoa(String name) {
+        this.name = name;
+    }
+
     public Pessoa(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    public Pessoa() {
+
     }
 
     public String getName() {
