@@ -1,12 +1,12 @@
 package Singleton;
 
 public class SingletonUsingStaticField {
-    private static final SingletonUsingStaticField INSTANCE = new SingletonUsingStaticField();
+    private static final SingletonUsingStaticField SINGLETON_USING_STATIC_FIELD = new SingletonUsingStaticField();
 
     private SingletonUsingStaticField(){ }
 
-    public static SingletonUsingStaticField getInstance(){
-        return INSTANCE;
+    public static SingletonUsingStaticField getInstanceStaticField(){
+        return SINGLETON_USING_STATIC_FIELD;
     }
     public void show(){
         System.out.println("Singleon using static initialization in Java");
@@ -14,6 +14,6 @@ public class SingletonUsingStaticField {
 
     public static void main(String[] args) {
         //Here is how to access this Singleton class
-        SingletonUsingStaticField.getInstance().show();
+        SingletonUsingStaticField.getInstanceStaticField().show();
     }
 }
