@@ -44,8 +44,6 @@ class Result{
         System.out.println(resultNegatives.doubleValue());
         System.out.println(resultZeros.doubleValue());
     }
-
-
 }
 
 public class Solution {
