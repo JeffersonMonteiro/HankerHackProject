@@ -1,4 +1,4 @@
-package Singleton;
+package designpatterns.singleton;
 
 public enum Singleton {
 

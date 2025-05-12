@@ -1,14 +1,5 @@
 package ChallengesDay1.exercise3;
 
-import com.sun.deploy.util.StringUtils;
-
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.util.Locale;
-
-
 public class TimeChallenge {
 
     public static void main(String[] args) {

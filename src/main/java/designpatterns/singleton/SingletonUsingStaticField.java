@@ -1,4 +1,4 @@
-package Singleton;
+package designpatterns.singleton;
 
 public class SingletonUsingStaticField {
     private static final SingletonUsingStaticField SINGLETON_USING_STATIC_FIELD = new SingletonUsingStaticField();

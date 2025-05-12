@@ -29,3 +29,18 @@ public class ArrayListIteration
         }
     }
 }
+
+//****************IMPORTANT*******************************
+//An Array can be converted into an ArrayList by making use of the
+//asList() method provided by the Array class. It is a static method that accepts List objects as a parameter.
+//
+//Syntax:
+//
+//        Arrays.asList(item)
+//Whereas an ArrayList can be converted into an Array using the toArray() method of the ArrayList class.
+//
+//Syntax:
+//
+//        List_object.toArray(new String[List_object.size()])
+//****************IMPORTANT*******************************
+
