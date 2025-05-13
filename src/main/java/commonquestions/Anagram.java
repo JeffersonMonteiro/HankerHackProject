@@ -1,14 +1,11 @@
 package commonquestions;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Anagram {
 
     public static void main(String[] args) {
-        String test = "Code smagrana dna, doce and anagrams";
+        String test = "dab Code arara smagrana dna, doce and anagrams arara , bad";
 
         new Anagram().solveChallenge(test);
     }
