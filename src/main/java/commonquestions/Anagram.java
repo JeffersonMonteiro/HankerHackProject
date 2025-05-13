@@ -8,11 +8,10 @@ import java.util.TreeSet;
 public class Anagram {
 
     public static void main(String[] args) {
-        String test = "Code aaagmnrs, doce and anagrams";
+        String test = "Code smagrana dna, doce and anagrams";
 
         new Anagram().solveChallenge(test);
     }
-
 
     private boolean isAnagram(String s1, String s2) {
         char[] aChars = s1.replaceAll("\\s", "").toCharArray();
@@ -21,24 +20,27 @@ public class Anagram {
         Arrays.sort(bChars);
         String one = String.valueOf(aChars).replaceAll("[^a-zA-Z0-9]", " ");
         String two = String.valueOf(bChars).replaceAll("[^a-zA-Z0-9]", " ");
-        return one.toLowerCase().equalsIgnoreCase(two.toLowerCase());
+        return one.toLowerCase().trim().equalsIgnoreCase(two.toLowerCase().trim());
     }
+
     private void solveChallenge(String input) {
         List<String> words = Arrays.asList(input.split(" "));
+        Set<String> result = new TreeSet<>();
 
-        for(int i=0 ;i<(words.size()-1); i++) {
-            Set<String> result = new TreeSet<>();
-            int j = i+1;
+        for (int i = 0; i < (words.size() - 1); i++) {
+            int j = i + 1;
             int size = words.size();
-            while(j < size) {
-                if (isAnagram(words.get(i), words.get(j))){
+            while (j < size) {
+                if (isAnagram(words.get(i), words.get(j))) {
                     result.add(words.get(i) + " " + words.get(j));
-                    System.out.println(result);
                     size--;
                 } else {
                     j++;
                 }
             }
         }
+
+        result.forEach(System.out::println);
+
     }
 }
